@@ -19,9 +19,9 @@
 
 
 ## userテーブル
-|Coulumn|Type|Options|
-|-------|----|-------|
-|user_name|string|null: false|
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
 その他Deviseで作成されるカラム
 
 ### Association
@@ -29,11 +29,17 @@
 - has_many :groups, through: :members
 - has_many :members
 
+### Index
+- name
+
+### Unique
+- name
+
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages

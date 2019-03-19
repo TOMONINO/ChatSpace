@@ -10,8 +10,9 @@ body, html {
 .chatSide {
   height: 100%;
   width: 300px;
-  color: white;
+  color: #FFFFFF;
   font-weight: bold;
+  float: left;
   }
 
 .sideHeader {
@@ -19,20 +20,41 @@ body, html {
   width: 100%;
   background-color: #253141;
   padding: 0 20px;
+  line-height: 100px;
+
+  &__userName {
+    float: left;
+    font-size: 16px;
+    width: 60%;
   }
 
-  // .&__userName {
-  //   font-size: 16px;
-  //   float: left;
-  // }
+  &__icon {
+    text-align: right;
+  }
 
-  // .icon {
-  //   float: right;
-  // }
+  &__icon li {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  }
 
 .sideGroups {
-  height: calc(100vw - 100px);
+  height: calc(100vh - 100px);
   width: 100%;
   background-color: #2f3e51;
   padding: 0 20px;
+}
+
+.group {
+  padding: 20px 0 40px;
+
+  &__name {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  &__message {
+    font-size: 11px;
+  }
 }

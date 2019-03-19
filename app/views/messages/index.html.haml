@@ -1,17 +1,15 @@
 .wrapper
   .chatSide
     .sideHeader
-      .sideHeader__box
-        %p.sideHeader__box__userName 朋子
-        %ul.sideHeader__box__icon
-          %li.sideHeader__box__icon__newGroup
-            %a{:href => "#"}
-              %i.fas.fa-edit
-          %li.sideHeader__box__icon__userEdit
-            %a{:href => "#"}
-              %i.fas.fa-cog
-      .sideGroups
-        %p.sideGroups__name test
-        %p.sideGropus__message こんにちは
-
-
+      %p.sideHeader__userName 朋子
+      %ul.sideHeader__icon
+        %li.sideHeader__icon__newGroup
+          %a{:href => "#"}
+            %i.fas.fa-edit
+        %li.sideHeader__icon__userEdit
+          %a{:href => "#"}
+            %i.fas.fa-cog
+    .sideGroups
+      .group
+        %p.sideGroups__group__name test
+        %p.sideGropus__group__message こんにちは

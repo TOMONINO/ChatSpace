@@ -16,11 +16,12 @@
 
   .chatMain
     .mainHeader
-      %p.mainHeader__groupName test
-      %ul.mainHeader__members
-        Members
-        %li.mainHeader__members__member
-          朋子
-        %li.mainHeader__members__member
-          ニノ
-      %a.mainHeader__btn Edit
+      .leftBox
+        %p.mainHeader__leftBox__groupName test
+        %ul.mainHeader__leftBox__members
+          Members：
+          %li.mainHeader__leftBox__members__member
+            朋子
+          %li.mainHeader__leftBox__members__member
+            ニノ
+      %button.mainHeader__btn Edit

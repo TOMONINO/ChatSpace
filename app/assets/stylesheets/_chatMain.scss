@@ -43,3 +43,38 @@
     background-color: #FFFFFF;
   }
 }
+
+.mainMessages {
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+
+.message {
+  padding-bottom: 40px;
+}
+
+.talkerInfo {
+  // display: flex;
+  margin-bottom: 10px;
+}
+
+  .talkerInfo__userName  {
+    float: left;
+    font-size: 16px;
+    color: #434A54;
+    font-weight: bold;
+  }
+
+  .talkerInfo__postedTime  {
+    float: left;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #999999;
+  }
+
+.message__content {
+  clear: both;
+  font-size: 14px;
+  color: #434A54;
+}
+}

@@ -33,12 +33,12 @@
           %p.talkerInfo__postedTime 2019/03/20(Wed)13:36:38
         %p.message__content こんにちは
 
-      .form
-        %form#newMessage.newMessage{:action => "#"}
-        .inputBox
-          %input#messageContent.inputBox__text{:placeholder => "type a message", :type => "text"}
-          %label.inputBox__image{:for => "messageImage"}
-          %span.filelabel
-            %i.fa.fa-image
-            %input#messageImage{:type => "file"}
-        %input.submitBtn{:type => "submit", :value => "Send"}
+    .form
+      %form#newMessage.newMessage{:action => "#"}
+      .inputBox
+        %input#messageContent.inputBox__text{:placeholder => "type a message", :type => "text"}
+        %label.inputBox__image{:for => "messageImage"}
+        %span.filelabel
+          %i.fa.fa-image
+          %input#messageImage{:type => "file"}
+      %input.submitBtn{:type => "submit", :value => "Send"}

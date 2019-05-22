@@ -2,13 +2,14 @@
   .chatSide
     .sideHeader
       %p.sideHeader__userName 朋子
-      %ul.sideHeader__icon
-        %li.sideHeader__icon__newGroup
-          %a{:href => "#"}
-            %i.fas.fa-edit
-        %li.sideHeader__icon__userEdit
-          %a{:href => "#"}
-            %i.fas.fa-cog
+      .sideheaderIcon
+        .sideHeaderIcon__newGroup
+          = link_to (newGroup_path) do
+           %i.fas.fa-edit
+        .sideHeaderIcon__userEdit
+          = link_to (userEdit_path) do
+           %i.fas.fa-cog
+           
     .sideGroups
       .group
         %p.sideGroups__group__name test

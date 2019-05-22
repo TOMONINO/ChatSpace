@@ -34,9 +34,9 @@
         %p.message__content こんにちは
 
     .form
-      %form#newMessage.newMessage{:action => "#", :method => "post"}
+      %form.newMessage{:action => "#", :method => "post"}
         .inputBox
-          %input#messageContent.inputBox__text{:placeholder => "type a message", :type => "text"}
+          %input.inputBox__text{:placeholder => "type a message", :type => "text"}
           %label.inputBox__image{:for => "messageImage"}
             %i.fa.fa-image
             %input#messageImage.inputBox__image__file{:type => "file"}

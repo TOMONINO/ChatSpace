@@ -9,7 +9,7 @@
         .sideHeaderIcon__userEdit
           = link_to (userEdit_path) do
            %i.fas.fa-cog
-           
+
     .sideGroups
       .group
         %p.sideGroups__group__name test
@@ -31,14 +31,14 @@
       .message
         .talkerInfo
           %p.talkerInfo__userName 朋子
-          %p.talkerInfo__postedTime 2019/03/20(Wed)13:36:38
+          %p.talkerInfo__postedTime 2019/05/22(Wed)13:36:38
         %p.message__content こんにちは
 
     .form
-      %form.newMessage{:action => "#", :method => "post"}
+      %form.newMessage{action: "#", method: "post"}
         .inputBox
-          %input.inputBox__text{:placeholder => "type a message", :type => "text"}
-          %label.inputBox__image{:for => "messageImage"}
+          %input.inputBox__text{placeholder: "type a message", type: "text"}
+          %label.inputBox__image{for: "messageImage"}
             %i.fa.fa-image
-            %input#messageImage.inputBox__image__file{:type => "file"}
-        %input.submitBtn{:type => "submit", :value => "Send"}
+            %input#messageImage.inputBox__image__file{type: "file"}
+        %input.submitBtn{type: "submit", value: "Send"}

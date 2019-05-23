@@ -1,0 +1,44 @@
+.wrapper
+  .chatSide
+    .sideHeader
+      %p.sideHeader__userName 朋子
+      .sideheaderIcon
+        .sideHeaderIcon__newGroup
+          = link_to (newGroup_path) do
+           %i.fas.fa-edit
+        .sideHeaderIcon__userEdit
+          = link_to (userEdit_path) do
+           %i.fas.fa-cog
+
+    .sideGroups
+      .group
+        %p.sideGroups__group__name test
+        %p.sideGropus__group__message こんにちは
+
+  .chatMain
+    .mainHeader
+      .leftBox
+        %p.mainHeader__leftBox__groupName test
+        %ul.mainHeader__leftBox__members
+          Members：
+          %li.mainHeader__leftBox__members__member
+            朋子
+          %li.mainHeader__leftBox__members__member
+            ニノ
+      %button.mainHeader__btn Edit
+
+    .mainMessages
+      .message
+        .talkerInfo
+          %p.talkerInfo__userName 朋子
+          %p.talkerInfo__postedTime 2019/05/22(Wed)13:36:38
+        %p.message__content こんにちは
+
+    .form
+      %form.newMessage{action: "#", method: "post"}
+        .inputBox
+          %input.inputBox__text{placeholder: "type a message", type: "text"}
+          %label.inputBox__image{for: "messageImage"}
+            %i.fa.fa-image
+            %input#messageImage.inputBox__image__file{type: "file"}
+        %input.submitBtn{type: "submit", value: "Send"}

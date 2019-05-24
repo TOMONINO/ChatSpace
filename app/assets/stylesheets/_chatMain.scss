@@ -11,7 +11,7 @@
   height: 100px;
   width: 100%;
   padding: 0 40px;
-  border-bottom: solid 1px $headerbottom;
+  border-bottom: solid 1px $header_bottom;
 
   .leftBox {
     float: left;
@@ -21,13 +21,13 @@
       margin-top: 35px;
       margin-bottom: 15px;
       font-size: 20px;
-      color: $leftboxgroupname;
+      color: $leftbox_groupname;
     }
 
     &__members {
       display: flex;
       font-size: 12px;
-      color: $leftboxmembers;
+      color: $leftbox_members;
     }
 
       & li {
@@ -49,7 +49,7 @@
 .mainMessages {
   height: calc(100vh - 190px);
   padding: 46px 40px;
-  background-color: $mainbackground;
+  background-color: $main_background;
 
 .message {
   padding-bottom: 40px;
@@ -85,7 +85,7 @@
   height: 90px;
   width: 100%;
   padding: 20px 40px;
-  background-color: $formbackground;
+  background-color: $form_background;
   position: fixed;
   bottom: 0;
 

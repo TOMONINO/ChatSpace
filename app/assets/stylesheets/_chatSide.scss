@@ -10,7 +10,7 @@ body, html {
 .chatSide {
   height: 100%;
   width: 300px;
-  color: #FFFFFF;
+  color: $white;
   font-weight: bold;
   float: left;
   }
@@ -18,7 +18,7 @@ body, html {
 .sideHeader {
   height: 100px;
   width: 100%;
-  background-color: #253141;
+  background-color: $side_header_dark;
   padding: 0 20px;
   line-height: 100px;
 
@@ -28,13 +28,19 @@ body, html {
     width: 60%;
   }
 
-  &__icon {
-    text-align: right;
-  }
+  &__icons {
+    width: 30%;
+    float: right;
 
-  &__icon li {
-    display: inline-block;
-    text-decoration: none;
+    &__icon {
+      display: inline-block;
+      text-decoration: none;
+      letter-spacing: 10px;
+    }
+
+    .fas {
+      color: $white;
+    }
   }
 
   }
@@ -42,7 +48,7 @@ body, html {
 .sideGroups {
   height: calc(100vh - 100px);
   width: 100%;
-  background-color: #2f3e51;
+  background-color: $side_groups;
   padding: 0 20px;
 }
 

@@ -18,7 +18,7 @@ body, html {
 .sideHeader {
   height: 100px;
   width: 100%;
-  background-color: $sideheaderbackground;
+  background-color: $side_header_dark;
   padding: 0 20px;
   line-height: 100px;
 
@@ -48,7 +48,7 @@ body, html {
 .sideGroups {
   height: calc(100vh - 100px);
   width: 100%;
-  background-color: $sidegroups;
+  background-color: $side_groups;
   padding: 0 20px;
 }
 

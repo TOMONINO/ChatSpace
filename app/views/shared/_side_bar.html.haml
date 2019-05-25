@@ -11,8 +11,8 @@
           %i.fas.fa-cog
 
   .sideGroups
-    .group
-      - current_user.groups.each do |group|
+    - current_user.groups.each do |group|
+      .group
         = link_to group_messages_path(group) do
           %p.sideGroups__group__name
             = group.name

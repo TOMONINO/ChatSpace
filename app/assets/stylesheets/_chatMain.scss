@@ -4,130 +4,134 @@
   height: 100%;
   width: calc(100% - 300px);
   float: left;
-}
 
-.mainHeader {
-  clear: both;
-  height: 100px;
-  width: 100%;
-  padding: 0 40px;
-  border-bottom: solid 1px $header_bottom;
+  .mainHeader {
+    clear: both;
+    height: 100px;
+    width: 100%;
+    padding: 0 40px;
+    border-bottom: solid 1px $header_bottom;
 
-  .leftBox {
-    float: left;
-  }
-
-    &__groupName {
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-size: 20px;
-      color: $leftbox_groupname;
-    }
-
-    &__members {
-      display: flex;
-      font-size: 12px;
-      color: $leftbox_members;
-    }
-
-      & li {
-        margin-left: 5px;
+    .leftBox {
+      float: left;
+  
+      &__groupName {
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: $leftbox_groupname;
       }
 
-  &__btn {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
-    margin-top: 30px;
-    border: solid 1px $skyblue;
-    color: $skyblue;
-    float: right;
-    background-color: $white;
-  }
-}
+      &__members {
+        display: flex;
+        font-size: 12px;
+        margin-top: 15px;
+        color: $leftbox_members;
 
-.mainMessages {
-  height: calc(100vh - 190px);
-  padding: 46px 40px;
-  background-color: $main_background;
-
-.message {
-  padding-bottom: 40px;
-}
-
-.talkerInfo {
-  margin-bottom: 10px;
-}
-
-  &__userName  {
-    float: left;
-    font-size: 16px;
-    color: $darkgray;
-    font-weight: bold;
-  }
-
-  &__postedTime  {
-    float: left;
-    margin-top: 4px;
-    margin-left: 10px;
-    font-size: 12px;
-    color: #999999;
-  }
-
-&__content {
-  clear: both;
-  font-size: 14px;
-  color: $darkgray;
-}
-}
-
-.form {
-  height: 90px;
-  width: 100%;
-  padding: 20px 40px;
-  background-color: $form_background;
-  position: fixed;
-  bottom: 0;
-
-  .newMessage {
-    height: 50px;
-    width: calc(100vw - 380px);
-    display: flex;
-
-    .inputBox {
-      position: relative;
-      width: 100%;
-
-      &__text {
-        height: 50px;
-        width: 100%;
-        padding-left: 10px;
-        font-size: 16px;
-        color: $darkgray;
-      }
-      
-      &__image {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 1.5em;
-        cursor: pointer;
-
-        #messageImage {
-          display: none;
+        &__member {
+          display: inline-block;
+          padding-right: 5px;
         }
       }
     }
-  }
-  
-    .submitBtn {
-      height: 50px;
-      width: 130px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: $skyblue;
-      color: $white;
-      cursor: pointer;
-      float: right;
+        // & li {
+        //   margin-left: 5px;
+        // }
+        &__btn {
+          height: 40px;
+          line-height: 40px;
+          padding: 0 20px;
+          margin-top: 30px;
+          border: solid 1px $skyblue;
+          color: $skyblue;
+          float: right;
+          background-color: $white;
+      }
     }
+
+  .mainMessages {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: $main_background;
+
+  .message {
+    padding-bottom: 40px;
+  }
+
+  .talkerInfo {
+    margin-bottom: 10px;
+  }
+
+    &__userName  {
+      float: left;
+      font-size: 16px;
+      color: $darkgray;
+      font-weight: bold;
+    }
+
+    &__postedTime  {
+      float: left;
+      margin-top: 4px;
+      margin-left: 10px;
+      font-size: 12px;
+      color: #999999;
+    }
+
+  &__content {
+    clear: both;
+    font-size: 14px;
+    color: $darkgray;
+  }
+  }
+
+  .form {
+    height: 90px;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: $form_background;
+    position: fixed;
+    bottom: 0;
+
+    .newMessage {
+      height: 50px;
+      width: calc(100vw - 380px);
+      display: flex;
+
+      .inputBox {
+        position: relative;
+        width: 100%;
+
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding-left: 10px;
+          font-size: 16px;
+          color: $darkgray;
+        }
+        
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.5em;
+          cursor: pointer;
+
+          #messageImage {
+            display: none;
+          }
+        }
+      }
+    }
+    
+      .submitBtn {
+        height: 50px;
+        width: 130px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $skyblue;
+        color: $white;
+        cursor: pointer;
+        float: right;
+      }
+  }
 }

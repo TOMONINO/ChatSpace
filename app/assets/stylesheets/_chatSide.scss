@@ -13,54 +13,57 @@ body, html {
   color: $white;
   font-weight: bold;
   float: left;
-  }
 
-.sideHeader {
-  height: 100px;
-  width: 100%;
-  background-color: $side_header_dark;
-  padding: 0 20px;
-  line-height: 100px;
+  .sideHeader {
+    height: 100px;
+    width: 100%;
+    background-color: $side_header_dark;
+    padding: 0 20px;
+    line-height: 100px;
 
-  &__userName {
-    float: left;
-    font-size: 16px;
-    width: 60%;
-  }
-
-  &__icons {
-    width: 30%;
-    float: right;
-
-    &__icon {
-      display: inline-block;
-      text-decoration: none;
-      letter-spacing: 10px;
+    &__userName {
+      float: left;
+      font-size: 16px;
+      width: 60%;
     }
 
-    .fas {
-      color: $white;
+    &__icons {
+      width: 30%;
+      float: right;
+
+      &__icon {
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 10px;
+      }
+
+      .fas {
+        color: $white;
+      }
     }
-  }
 
-  }
+    }
 
-.sideGroups {
-  height: calc(100vh - 100px);
-  width: 100%;
-  background-color: $side_groups;
-  padding: 0 20px;
-}
+  .sideGroups {
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-color: $side_groups;
+    padding: 0 20px;
 
-.group {
-  padding: 20px 0 40px;
+    .group {
+      padding: 20px 0 40px;
 
-  &__name {
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
+      .sideGroups__group__name {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color:$white;
+      }
 
-  &__message {
-    font-size: 11px;
+      .sideGropus__group__message {
+        font-size: 11px;
+        color:$white;
+      }
+    }
   }
 }

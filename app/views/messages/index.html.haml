@@ -22,10 +22,17 @@
         %p.message__content こんにちは
 
     .form
-      %form.newMessage{action: "#", method: "post"}
-        .inputBox
-          %input.inputBox__text{placeholder: "type a message", type: "text"}
-          %label.inputBox__image{for: "messageImage"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
             %i.fa.fa-image
-            %input#messageImage.inputBox__image__file{type: "file"}
-        %input.submitBtn{type: "submit", value: "Send"}
+            =f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+      -# %form.newMessage{action: "#", method: "post"}
+      -#   .inputBox
+      -#     %input.inputBox__text{placeholder: "type a message", type: "text"}
+      -#     %label.inputBox__image{for: "messageImage"}
+      -#       %i.fa.fa-image
+      -#       %input#messageImage.inputBox__image__file{type: "file"}
+      -#   %input.submitBtn{type: "submit", value: "Send"}

@@ -26,7 +26,7 @@
         display: flex;
         font-size: 12px;
         margin-top: 15px;
-        color: $leftbox_members;
+        color: $light_gray;
 
         &__member {
           display: inline-block;
@@ -54,36 +54,31 @@
     padding: 46px 40px;
     background-color: $main_background;
 
-  .message {
-    padding-bottom: 40px;
-  }
-
-  .talkerInfo {
-    margin-bottom: 10px;
-  }
-
-    &__userName  {
-      float: left;
-      font-size: 16px;
-      color: $darkgray;
-      font-weight: bold;
+    .message {
+      .talkerInfo {
+        display: flex;
+        &__userName  {
+          font-size: 16px;
+          color: $dark_gray;
+          font-weight: bold;
+        }
+        &__postedTime  {
+          padding-left: 10px;
+          font-size: 12px;
+          color: $light_gray;
+        }
+      }
+      .lowerMessage {
+        margin-top: 10px;
+        &__content {
+          color: $dark_gray;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+      }
     }
-
-    &__postedTime  {
-      float: left;
-      margin-top: 4px;
-      margin-left: 10px;
-      font-size: 12px;
-      color: #999999;
-    }
-
-  &__content {
-    clear: both;
-    font-size: 14px;
-    color: $darkgray;
   }
-  }
-
+  
   .form {
     background-color: $form_background;
     box-sizing: border-box;

@@ -15,11 +15,7 @@
       %button.mainHeader__btn Edit
 
     .mainMessages
-      .message
-        .talkerInfo
-          %p.talkerInfo__userName 朋子
-          %p.talkerInfo__postedTime 2019/05/22(Wed)13:36:38
-        %p.message__content こんにちは
+      = render @messages
 
     .form
       = form_for [@group, @message] do |f|
@@ -29,6 +25,7 @@
             %i.fa.fa-image
             =f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
+        
       -# %form.newMessage{action: "#", method: "post"}
       -#   .inputBox
       -#     %input.inputBox__text{placeholder: "type a message", type: "text"}

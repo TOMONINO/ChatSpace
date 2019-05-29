@@ -5,14 +5,15 @@
   .chatMain
     .mainHeader
       .leftBox
-        %p.mainHeader__leftBox__groupName test
+        %p.mainHeader__leftBox__groupName
+          = @group.name
         %ul.mainHeader__leftBox__members
-          Members：
+          Member：
           %li.mainHeader__leftBox__members__member
-            朋子
-          %li.mainHeader__leftBox__members__member
-            ニノ
-      %button.mainHeader__btn Edit
+            - @group.users.each do |user|
+              = user.name
+      %button.mainHeader__btn
+        = link_to 'Edit', edit_group_path(@group), class: 'mainHeader__btn__inside'
 
     .mainMessages
       = render @messages
@@ -25,11 +26,3 @@
             %i.fa.fa-image
             =f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-        
-      -# %form.newMessage{action: "#", method: "post"}
-      -#   .inputBox
-      -#     %input.inputBox__text{placeholder: "type a message", type: "text"}
-      -#     %label.inputBox__image{for: "messageImage"}
-      -#       %i.fa.fa-image
-      -#       %input#messageImage.inputBox__image__file{type: "file"}
-      -#   %input.submitBtn{type: "submit", value: "Send"}

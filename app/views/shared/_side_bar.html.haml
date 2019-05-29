@@ -5,10 +5,10 @@
     %ul.sideHeader__icons
       %li.sideHeader__icons__icon
         = link_to new_group_path do
-          %i.fas.fa-edit
+          = fa_icon 'pencil-square-o', class: 'fa'
       %li.sideHeader__icons__icon
         = link_to edit_user_path(current_user) do
-          %i.fas.fa-cog
+          = fa_icon 'cog', class: 'fa'
 
   .sideGroups
     - current_user.groups.each do |group|
@@ -17,4 +17,4 @@
           %p.sideGroups__group__name
             = group.name
           %p.sideGropus__group__message
-            メッセージはまだありません。
+            = group.show_last_message

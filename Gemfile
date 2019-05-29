@@ -58,5 +58,9 @@ gem 'erb2haml'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 
 gem 'devise'
+
+gem 'carrierwave'
+gem 'mini_magick'

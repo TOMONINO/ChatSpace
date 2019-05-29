@@ -5,27 +5,24 @@
   .chatMain
     .mainHeader
       .leftBox
-        %p.mainHeader__leftBox__groupName test
+        %p.mainHeader__leftBox__groupName
+          = @group.name
         %ul.mainHeader__leftBox__members
-          Members：
+          Member：
           %li.mainHeader__leftBox__members__member
-            朋子
-          %li.mainHeader__leftBox__members__member
-            ニノ
-      %button.mainHeader__btn Edit
+            - @group.users.each do |user|
+              = user.name
+      %button.mainHeader__btn
+        = link_to 'Edit', edit_group_path(@group), class: 'mainHeader__btn__inside'
 
     .mainMessages
-      .message
-        .talkerInfo
-          %p.talkerInfo__userName 朋子
-          %p.talkerInfo__postedTime 2019/05/22(Wed)13:36:38
-        %p.message__content こんにちは
+      = render @messages
 
     .form
-      %form.newMessage{action: "#", method: "post"}
-        .inputBox
-          %input.inputBox__text{placeholder: "type a message", type: "text"}
-          %label.inputBox__image{for: "messageImage"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
             %i.fa.fa-image
-            %input#messageImage.inputBox__image__file{type: "file"}
-        %input.submitBtn{type: "submit", value: "Send"}
+            =f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

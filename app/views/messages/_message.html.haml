@@ -3,7 +3,7 @@
     .talkerInfo__userName
       = message.user.name
     .talkerInfo__postedTime
-      = message.created_at.strftime("%Y/%m%d %H:%M")
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
   .lowerMessage
     - if message.content.present?
       %p.lowerMessage__content

@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function() {
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var image = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="message">
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="talkerInfo">
                     <div class="talkerInfo__userName">
                       ${ message.user_name }
@@ -31,12 +31,17 @@ $(document).on('turbolinks:load', function() {
       data: {last_id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      var insertHTML = '';
+      messages.forEach(function (message) {
+        insertHTML = buildHTML(message);
+        $('.messages').append(insertHTML);
+      })
     })
     .fail(function() {
       console.log('error');
     });
   }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
